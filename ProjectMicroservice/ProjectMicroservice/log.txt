@@ -1,0 +1,620 @@
+﻿2025-06-11 19:47:34.049 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-11 19:47:34.253 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-11 19:47:34.255 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-11 19:47:34.320 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 19:47:34.321 +01:00 [INF] Hosting environment: Development
+2025-06-11 19:47:34.322 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\ProjectMicroservice\ProjectMicroservice
+2025-06-11 19:47:35.142 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-11 19:47:35.416 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 150.7292 ms
+2025-06-11 19:47:35.446 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 314.4642ms
+2025-06-11 19:47:35.468 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-11 19:47:35.468 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-11 19:47:35.491 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 22.6655ms
+2025-06-11 19:47:35.527 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.934ms
+2025-06-11 19:47:35.587 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-11 19:47:35.658 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 36.3308 ms
+2025-06-11 19:47:35.661 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 74.4291ms
+2025-06-11 19:47:47.889 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:47:47.906 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 19:47:47.935 +01:00 [INF] Route matched with {action = "CreateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateToken(System.String, System.String) on controller ProjectMicroservice.Controllers.AuthController (ProjectMicroservice).
+2025-06-11 19:47:47.962 +01:00 [INF] CreateToken | Login attempt received for user: admin
+2025-06-11 19:47:47.987 +01:00 [INF] CreateToken | Token successfully generated for user: admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjE3MDY5YWE3LWUwMjAtNDBkOS1iMDhmLTZlZjRlMDU2MTc4OCIsImV4cCI6MTc0OTY3MTI2NywiaXNzIjoiUHJvamVjdE1pY3Jvc29mdCIsImF1ZCI6IlVzZXIxIn0.iATWo1i5-itkhJEQZXTj20r_rxKe8ctTfoT5QcZcyRI
+2025-06-11 19:47:47.991 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-11 19:47:47.998 +01:00 [INF] Executed action ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) in 58.3805ms
+2025-06-11 19:47:48.000 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 19:47:48.000 +01:00 [INF] HTTP POST /api/Auth/token responded 200 in 104.8926 ms
+2025-06-11 19:47:48.002 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 200 null application/json; charset=utf-8 112.7488ms
+2025-06-11 19:47:50.090 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:47:50.094 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 0.8183 ms
+2025-06-11 19:47:50.095 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 5.5928ms
+2025-06-11 19:47:50.524 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:47:50.531 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 0.1590 ms
+2025-06-11 19:47:50.532 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 9.2529ms
+2025-06-11 19:47:50.986 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:47:50.989 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 0.3289 ms
+2025-06-11 19:47:50.992 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 5.9688ms
+2025-06-11 19:51:08.385 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-11 19:51:08.580 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-11 19:51:08.582 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-11 19:51:08.665 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 19:51:08.666 +01:00 [INF] Hosting environment: Development
+2025-06-11 19:51:08.667 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\ProjectMicroservice\ProjectMicroservice
+2025-06-11 19:51:09.330 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-11 19:51:09.551 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 127.1310 ms
+2025-06-11 19:51:09.560 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 238.8454ms
+2025-06-11 19:51:09.579 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-11 19:51:09.579 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-11 19:51:09.610 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 31.4086ms
+2025-06-11 19:51:09.641 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.6115ms
+2025-06-11 19:51:09.709 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-11 19:51:09.770 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 56.3480 ms
+2025-06-11 19:51:09.773 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 64.3289ms
+2025-06-11 19:51:51.666 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:51:51.680 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 19:51:51.698 +01:00 [INF] Route matched with {action = "CreateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateToken(System.String, System.String) on controller ProjectMicroservice.Controllers.AuthController (ProjectMicroservice).
+2025-06-11 19:51:51.717 +01:00 [INF] CreateToken | Login attempt received for user: admin
+2025-06-11 19:51:51.737 +01:00 [INF] CreateToken | Token successfully generated for user: admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjU5NTNhMGUzLTI3ZjQtNDhiYy1hNGVhLTVkNjFiZGU1ZmE1NiIsImV4cCI6MTc0OTY3MTUxMSwiaXNzIjoiUHJvamVjdE1pY3Jvc29mdCIsImF1ZCI6IlVzZXIxIn0.OfxvPmhKTtAooINTtWNp_P-EByVqn52nos0eSba0OF8
+2025-06-11 19:51:51.743 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-11 19:51:51.750 +01:00 [INF] Executed action ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) in 47.57ms
+2025-06-11 19:51:51.751 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 19:51:51.752 +01:00 [INF] HTTP POST /api/Auth/token responded 200 in 80.8431 ms
+2025-06-11 19:51:51.753 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 200 null application/json; charset=utf-8 87.7412ms
+2025-06-11 19:51:52.779 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:51:52.791 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 1.7338 ms
+2025-06-11 19:51:52.795 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 15.9086ms
+2025-06-11 19:51:57.976 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:51:57.978 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 0.2426 ms
+2025-06-11 19:51:57.980 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 4.7634ms
+2025-06-11 19:51:58.467 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:51:58.473 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 0.1951 ms
+2025-06-11 19:51:58.476 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 9.6094ms
+2025-06-11 19:51:58.894 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:51:58.898 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 0.2616 ms
+2025-06-11 19:51:58.902 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 8.5209ms
+2025-06-11 19:52:48.184 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - null null
+2025-06-11 19:52:48.200 +01:00 [INF] HTTP GET /swagger/v2/swagger.json responded 200 in 7.2401 ms
+2025-06-11 19:52:48.202 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 18.1999ms
+2025-06-11 19:52:59.401 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 19:52:59.431 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 19:52:59.433 +01:00 [INF] Route matched with {action = "CreateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateToken(System.String, System.String) on controller ProjectMicroservice.Controllers.AuthController (ProjectMicroservice).
+2025-06-11 19:52:59.435 +01:00 [INF] CreateToken | Login attempt received for user: admin
+2025-06-11 19:52:59.436 +01:00 [INF] CreateToken | Token successfully generated for user: admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjcxYTZjNjg4LTlmYjUtNDljNy04MDM2LWM3ZDZjNGI1MWM3OCIsImV4cCI6MTc0OTY3MTU3OSwiaXNzIjoiUHJvamVjdE1pY3Jvc29mdCIsImF1ZCI6IlVzZXIxIn0.lsaZiIVmbn4CI3o375EKDHnQoebSing2GftLMR_z_FE
+2025-06-11 19:52:59.437 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-11 19:52:59.438 +01:00 [INF] Executed action ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) in 3.6527ms
+2025-06-11 19:52:59.439 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 19:52:59.440 +01:00 [INF] HTTP POST /api/Auth/token responded 200 in 36.4430 ms
+2025-06-11 19:52:59.441 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 200 null application/json; charset=utf-8 41.0934ms
+2025-06-11 19:53:14.060 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/api/v2/Categories - null null
+2025-06-11 19:53:14.071 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.CategoriesController.GetCategoryList (ProjectMicroservice)'
+2025-06-11 19:53:14.074 +01:00 [INF] Route matched with {action = "GetCategoryList", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]] GetCategoryList() on controller ProjectMicroservice.Controllers.CategoriesController (ProjectMicroservice).
+2025-06-11 19:53:14.860 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-06-11 19:53:15.172 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [c].[CategoryID] AS [CategoryId], [c].[CategoryName], [c].[Description]
+FROM [Categories] AS [c]
+2025-06-11 19:53:15.202 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], ProjectMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 19:53:15.206 +01:00 [INF] Executed action ProjectMicroservice.Controllers.CategoriesController.GetCategoryList (ProjectMicroservice) in 1131.4447ms
+2025-06-11 19:53:15.209 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.CategoriesController.GetCategoryList (ProjectMicroservice)'
+2025-06-11 19:53:15.210 +01:00 [INF] HTTP GET /api/v2/Categories responded 200 in 1145.7534 ms
+2025-06-11 19:53:15.218 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/api/v2/Categories - 200 null application/json; charset=utf-8 1158.2127ms
+2025-06-11 20:00:50.462 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-11 20:00:50.724 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-11 20:00:50.725 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-11 20:00:50.816 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:00:50.818 +01:00 [INF] Hosting environment: Development
+2025-06-11 20:00:50.819 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\ProjectMicroservice\ProjectMicroservice
+2025-06-11 20:00:51.805 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-11 20:00:52.021 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 126.3398 ms
+2025-06-11 20:00:52.028 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 231.579ms
+2025-06-11 20:00:52.046 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-11 20:00:52.046 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-11 20:00:52.056 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.4589ms
+2025-06-11 20:00:52.119 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.0152ms
+2025-06-11 20:00:52.156 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-11 20:00:52.194 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 34.7719 ms
+2025-06-11 20:00:52.197 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.8473ms
+2025-06-11 20:02:00.708 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-11 20:02:00.977 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-11 20:02:00.978 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-11 20:02:01.077 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:02:01.079 +01:00 [INF] Hosting environment: Development
+2025-06-11 20:02:01.080 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\ProjectMicroservice\ProjectMicroservice
+2025-06-11 20:02:02.031 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-11 20:02:02.339 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 184.8356 ms
+2025-06-11 20:02:02.348 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 328.9648ms
+2025-06-11 20:02:02.366 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-11 20:02:02.373 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-11 20:02:02.389 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 22.8656ms
+2025-06-11 20:02:02.466 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.7103ms
+2025-06-11 20:02:02.537 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-11 20:02:02.638 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 40.6305 ms
+2025-06-11 20:02:02.642 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 104.9895ms
+2025-06-11 20:02:26.425 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 20:02:26.441 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 20:02:26.463 +01:00 [INF] Route matched with {action = "CreateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateToken(System.String, System.String) on controller ProjectMicroservice.Controllers.AuthController (ProjectMicroservice).
+2025-06-11 20:02:26.483 +01:00 [INF] CreateToken | Login attempt received for user: admin
+2025-06-11 20:02:26.504 +01:00 [INF] CreateToken | Token successfully generated for user: admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjA0ZDQ5Y2ZjLTg3ZTMtNDdlYi04OWRhLTgzN2MzMjY4YWEyZSIsImV4cCI6MTc0OTY3MjE0NiwiaXNzIjoiUHJvamVjdE1pY3Jvc29mdCIsImF1ZCI6IlVzZXIxIn0.s_o7-kubqzWU63Xvg_Tu-vwBvun042iApluk71ZN5xY
+2025-06-11 20:02:26.508 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-11 20:02:26.517 +01:00 [INF] Executed action ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) in 48.7107ms
+2025-06-11 20:02:26.518 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 20:02:26.519 +01:00 [INF] HTTP POST /api/Auth/token responded 200 in 87.1045 ms
+2025-06-11 20:02:26.521 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 200 null application/json; charset=utf-8 95.7054ms
+2025-06-11 20:02:35.272 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - null null
+2025-06-11 20:02:35.283 +01:00 [INF] HTTP GET /swagger/v2/swagger.json responded 200 in 8.4714 ms
+2025-06-11 20:02:35.285 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 13.4949ms
+2025-06-11 20:02:45.505 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-11 20:02:45.539 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 20:02:45.541 +01:00 [INF] Route matched with {action = "CreateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateToken(System.String, System.String) on controller ProjectMicroservice.Controllers.AuthController (ProjectMicroservice).
+2025-06-11 20:02:45.546 +01:00 [INF] CreateToken | Login attempt received for user: admin
+2025-06-11 20:02:45.548 +01:00 [INF] CreateToken | Token successfully generated for user: admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjgyODVjMWU3LWNmZmMtNDUzNS05YTYxLTNmNjNhYzRlOWRhMCIsImV4cCI6MTc0OTY3MjE2NSwiaXNzIjoiUHJvamVjdE1pY3Jvc29mdCIsImF1ZCI6IlVzZXIxIn0.-tOPSo4mKnjlD8qxggHl7Wc-uXTAefctrWGWQSMkU7c
+2025-06-11 20:02:45.550 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-11 20:02:45.551 +01:00 [INF] Executed action ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) in 6.9593ms
+2025-06-11 20:02:45.553 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-11 20:02:45.554 +01:00 [INF] HTTP POST /api/Auth/token responded 200 in 46.0326 ms
+2025-06-11 20:02:45.555 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 200 null application/json; charset=utf-8 50.7724ms
+2025-06-11 20:03:19.696 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v2/Categories - application/json 55
+2025-06-11 20:03:19.703 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice)'
+2025-06-11 20:03:19.707 +01:00 [INF] Route matched with {action = "Create", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ProjectMicroservice.Models.Category] Create(ProjectMicroservice.Models.Category) on controller ProjectMicroservice.Controllers.CategoriesController (ProjectMicroservice).
+2025-06-11 20:03:19.855 +01:00 [INF] CategoriesController | Create request received {"CategoryId":0,"CategoryName":"hello","Description":"mello","Picture":null,"Products":[],"$type":"Category"}
+2025-06-11 20:03:20.938 +01:00 [INF] Executed DbCommand (40ms) [Parameters=[@p0='?' (Size = 15), @p1='?' (Size = 4000), @p2='?' (Size = 8000) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([CategoryName], [Description], [Picture])
+OUTPUT INSERTED.[CategoryID]
+VALUES (@p0, @p1, @p2);
+2025-06-11 20:03:20.973 +01:00 [INF] CategoriesController | Category created successfully with Id: 23
+2025-06-11 20:03:20.976 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjectMicroservice.Models.Category'.
+2025-06-11 20:03:21.001 +01:00 [INF] Executed action ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice) in 1292.5421ms
+2025-06-11 20:03:21.002 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice)'
+2025-06-11 20:03:21.004 +01:00 [INF] HTTP POST /api/v2/Categories responded 201 in 1304.8967 ms
+2025-06-11 20:03:21.013 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v2/Categories - 201 null application/json; charset=utf-8 1317.8102ms
+2025-06-12 22:25:40.655 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-12 22:25:41.050 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-12 22:25:41.052 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-12 22:25:41.183 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 22:25:41.186 +01:00 [INF] Hosting environment: Development
+2025-06-12 22:25:41.187 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\ProjectMicroservice\ProjectMicroservice
+2025-06-12 22:25:42.287 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-12 22:25:42.746 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 257.0124 ms
+2025-06-12 22:25:42.763 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 531.6042ms
+2025-06-12 22:25:42.777 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:25:42.778 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:25:42.813 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 38.2224ms
+2025-06-12 22:25:43.436 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 659.5805ms
+2025-06-12 22:25:43.540 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-12 22:25:43.648 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 94.2249 ms
+2025-06-12 22:25:43.674 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 134.638ms
+2025-06-12 22:25:59.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler - null null
+2025-06-12 22:25:59.674 +01:00 [INF] HTTP GET /profiler responded 404 in 14.3333 ms
+2025-06-12 22:25:59.678 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler - 404 11 text/plain 29.0936ms
+2025-06-12 22:25:59.787 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/favicon.ico - null null
+2025-06-12 22:25:59.797 +01:00 [INF] HTTP GET /favicon.ico responded 404 in 1.3584 ms
+2025-06-12 22:25:59.800 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/favicon.ico - 404 0 null 14.9058ms
+2025-06-12 22:25:59.811 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/favicon.ico, Response status code: 404
+2025-06-12 22:26:13.800 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results - null null
+2025-06-12 22:26:13.820 +01:00 [INF] HTTP GET /profiler/results responded 404 in 14.3531 ms
+2025-06-12 22:26:13.822 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results - 404 40 text/plain 23.3178ms
+2025-06-12 22:26:34.045 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - null null
+2025-06-12 22:26:34.055 +01:00 [INF] HTTP GET /swagger/v2/swagger.json responded 200 in 7.5190 ms
+2025-06-12 22:26:34.060 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 14.5113ms
+2025-06-12 22:26:43.067 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-12 22:26:43.090 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-12 22:26:43.122 +01:00 [INF] Route matched with {action = "CreateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateToken(System.String, System.String) on controller ProjectMicroservice.Controllers.AuthController (ProjectMicroservice).
+2025-06-12 22:26:43.141 +01:00 [INF] Executing action method ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) - Validation state: "Valid"
+2025-06-12 22:26:43.143 +01:00 [INF] CreateToken | Login attempt received for user: admin
+2025-06-12 22:26:43.166 +01:00 [INF] CreateToken | Token successfully generated for user: admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjFjZjdjM2FhLWI2MTItNGY3Ny04MWNiLWZlMjg0NmQwNGI3YiIsImV4cCI6MTc0OTc2NzIwMywiaXNzIjoiUHJvamVjdE1pY3Jvc29mdCIsImF1ZCI6IlVzZXIxIn0.BavE81Zeup0XMFyfTr6suIcO4xlUnvLPtdTlYDevr6I
+2025-06-12 22:26:43.170 +01:00 [INF] Executed action method ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.2332ms.
+2025-06-12 22:26:43.175 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 22:26:43.183 +01:00 [INF] Executed action ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) in 56.0961ms
+2025-06-12 22:26:43.185 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-12 22:26:43.190 +01:00 [INF] HTTP POST /api/Auth/token responded 200 in 116.6964 ms
+2025-06-12 22:26:43.191 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 200 null application/json; charset=utf-8 124.3826ms
+2025-06-12 22:27:22.736 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - null null
+2025-06-12 22:27:22.749 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-06-12 22:27:22.752 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-12 22:27:22.753 +01:00 [INF] HTTP GET /api/v2/Categories/5 responded 401 in 12.4943 ms
+2025-06-12 22:27:22.756 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - 401 0 null 20.3261ms
+2025-06-12 22:27:25.688 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - null null
+2025-06-12 22:27:25.700 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-06-12 22:27:25.704 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-12 22:27:25.704 +01:00 [INF] HTTP GET /api/v2/Categories/5 responded 401 in 5.9220 ms
+2025-06-12 22:27:25.706 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - 401 0 null 18.4866ms
+2025-06-12 22:27:38.139 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - null null
+2025-06-12 22:27:38.178 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice)'
+2025-06-12 22:27:38.184 +01:00 [INF] Route matched with {action = "GetById", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ProjectMicroservice.Models.Category] GetById(Int32) on controller ProjectMicroservice.Controllers.CategoriesController (ProjectMicroservice).
+2025-06-12 22:27:38.316 +01:00 [INF] Executing action method ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice) - Validation state: "Valid"
+2025-06-12 22:27:39.130 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+2025-06-12 22:27:39.170 +01:00 [INF] Executed action method ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 853.2447ms.
+2025-06-12 22:27:39.173 +01:00 [INF] Executing OkObjectResult, writing value of type 'ProjectMicroservice.Models.Category'.
+2025-06-12 22:27:39.196 +01:00 [INF] Executed action ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice) in 1010.9627ms
+2025-06-12 22:27:39.197 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice)'
+2025-06-12 22:27:39.199 +01:00 [INF] HTTP GET /api/v2/Categories/5 responded 200 in 1058.0368 ms
+2025-06-12 22:27:39.205 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - 200 null application/json; charset=utf-8 1066.8919ms
+2025-06-12 22:27:42.693 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results - null null
+2025-06-12 22:27:42.741 +01:00 [INF] HTTP GET /profiler/results responded 200 in 39.3917 ms
+2025-06-12 22:27:42.748 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results - 200 null text/html; charset=utf-8 54.5301ms
+2025-06-12 22:27:42.770 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/includes.min.js?v=4.5.4+b99c53b4e4 - null null
+2025-06-12 22:27:42.771 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:27:42.771 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:27:42.785 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 14.0358ms
+2025-06-12 22:27:42.797 +01:00 [INF] HTTP GET /profiler/includes.min.js responded 200 in 23.7669 ms
+2025-06-12 22:27:42.803 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/includes.min.js?v=4.5.4+b99c53b4e4 - 200 53173 application/javascript 33.3079ms
+2025-06-12 22:27:42.806 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.4604ms
+2025-06-12 22:27:42.909 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/includes.min.css?v=4.5.4+b99c53b4e4 - null null
+2025-06-12 22:27:42.914 +01:00 [INF] HTTP GET /profiler/includes.min.css responded 200 in 2.6482 ms
+2025-06-12 22:27:42.916 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/includes.min.css?v=4.5.4+b99c53b4e4 - 200 18082 text/css 7.6565ms
+2025-06-12 22:28:51.985 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-12 22:28:52.307 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-12 22:28:52.309 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-12 22:28:52.407 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 22:28:52.410 +01:00 [INF] Hosting environment: Development
+2025-06-12 22:28:52.411 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\ProjectMicroservice\ProjectMicroservice
+2025-06-12 22:28:53.235 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-12 22:28:53.722 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 275.2104 ms
+2025-06-12 22:28:53.735 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 539.0418ms
+2025-06-12 22:28:53.757 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:28:53.761 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:28:53.786 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 29.6999ms
+2025-06-12 22:28:53.853 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.1975ms
+2025-06-12 22:28:53.973 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-12 22:28:54.115 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 57.9270 ms
+2025-06-12 22:28:54.121 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.0959ms
+2025-06-12 22:28:56.255 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - null null
+2025-06-12 22:28:56.273 +01:00 [INF] HTTP GET /swagger/v2/swagger.json responded 200 in 13.1759 ms
+2025-06-12 22:28:56.277 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 21.9461ms
+2025-06-12 22:29:07.172 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-12 22:29:07.194 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-12 22:29:07.215 +01:00 [INF] Route matched with {action = "CreateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateToken(System.String, System.String) on controller ProjectMicroservice.Controllers.AuthController (ProjectMicroservice).
+2025-06-12 22:29:07.238 +01:00 [INF] Executing action method ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) - Validation state: "Valid"
+2025-06-12 22:29:07.240 +01:00 [INF] CreateToken | Login attempt received for user: admin
+2025-06-12 22:29:07.259 +01:00 [INF] CreateToken | Token successfully generated for user: admin token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjllY2FmN2U0LWVmNGUtNGQ0OS04YjM2LWQ5ZTUwN2FlZDcwZSIsImV4cCI6MTc0OTc2NzM0NywiaXNzIjoiUHJvamVjdE1pY3Jvc29mdCIsImF1ZCI6IlVzZXIxIn0._uWaqHgdXCsRP2NZnEHLjIma_NLNMcnmPIDtSzv0kqc
+2025-06-12 22:29:07.262 +01:00 [INF] Executed action method ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.5002ms.
+2025-06-12 22:29:07.269 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 22:29:07.277 +01:00 [INF] Executed action ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice) in 57.0736ms
+2025-06-12 22:29:07.278 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.AuthController.CreateToken (ProjectMicroservice)'
+2025-06-12 22:29:07.284 +01:00 [INF] HTTP POST /api/Auth/token responded 200 in 107.2906 ms
+2025-06-12 22:29:07.286 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 200 null application/json; charset=utf-8 114.3778ms
+2025-06-12 22:29:08.653 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - null 0
+2025-06-12 22:29:08.660 +01:00 [ERR] HTTP POST /api/Auth/token responded 503 in 0.8862 ms
+2025-06-12 22:29:08.663 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Auth/token?username=admin&password=password - 503 0 null 9.5003ms
+2025-06-12 22:30:02.142 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - null null
+2025-06-12 22:30:02.193 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice)'
+2025-06-12 22:30:02.200 +01:00 [INF] Route matched with {action = "GetById", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ProjectMicroservice.Models.Category] GetById(Int32) on controller ProjectMicroservice.Controllers.CategoriesController (ProjectMicroservice).
+2025-06-12 22:30:02.302 +01:00 [INF] Executing action method ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice) - Validation state: "Valid"
+2025-06-12 22:30:03.148 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+2025-06-12 22:30:03.192 +01:00 [INF] Executed action method ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 888.2088ms.
+2025-06-12 22:30:03.198 +01:00 [INF] Executing OkObjectResult, writing value of type 'ProjectMicroservice.Models.Category'.
+2025-06-12 22:30:03.222 +01:00 [INF] Executed action ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice) in 1019.6544ms
+2025-06-12 22:30:03.223 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.CategoriesController.GetById (ProjectMicroservice)'
+2025-06-12 22:30:03.225 +01:00 [INF] HTTP GET /api/v2/Categories/5 responded 200 in 1077.6501 ms
+2025-06-12 22:30:03.233 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/api/v2/Categories/5 - 200 null application/json; charset=utf-8 1091.1266ms
+2025-06-12 22:30:14.813 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results - null null
+2025-06-12 22:30:14.943 +01:00 [INF] HTTP GET /profiler/results responded 200 in 118.5938 ms
+2025-06-12 22:30:14.945 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results - 200 null text/html; charset=utf-8 132.6373ms
+2025-06-12 22:30:14.992 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:30:14.992 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:30:15.008 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.8052ms
+2025-06-12 22:30:15.023 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.7734ms
+2025-06-12 22:30:15.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/favicon.ico - null null
+2025-06-12 22:30:15.044 +01:00 [INF] HTTP GET /favicon.ico responded 404 in 0.3190 ms
+2025-06-12 22:30:15.046 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/favicon.ico - 404 0 null 5.4149ms
+2025-06-12 22:30:15.053 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/favicon.ico, Response status code: 404
+2025-06-12 22:32:14.228 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-index - null null
+2025-06-12 22:32:14.244 +01:00 [INF] HTTP GET /profiler/results-index responded 200 in 3.3201 ms
+2025-06-12 22:32:14.247 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-index - 200 null text/html; charset=utf-8 19.1877ms
+2025-06-12 22:32:14.280 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:32:14.281 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=undefined - application/json null
+2025-06-12 22:32:14.281 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:32:14.304 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 22.1305ms
+2025-06-12 22:32:14.314 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.7073ms
+2025-06-12 22:32:14.329 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 31.4762 ms
+2025-06-12 22:32:14.331 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=undefined - 200 402 null 49.9396ms
+2025-06-12 22:32:18.356 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:18.363 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 3.0239 ms
+2025-06-12 22:32:18.365 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 9.2996ms
+2025-06-12 22:32:22.376 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:22.379 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.4519 ms
+2025-06-12 22:32:22.381 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 5.798ms
+2025-06-12 22:32:23.334 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results?id=c3604106-4934-4b98-b60a-067f5e5bc533 - null null
+2025-06-12 22:32:23.340 +01:00 [INF] HTTP GET /profiler/results responded 200 in 0.7170 ms
+2025-06-12 22:32:23.342 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results?id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 null text/html; charset=utf-8 8.2695ms
+2025-06-12 22:32:23.380 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:32:23.381 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:32:23.391 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.6666ms
+2025-06-12 22:32:23.397 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.1234ms
+2025-06-12 22:32:24.691 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:32:24.694 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 3.9903ms
+2025-06-12 22:32:29.260 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:29.265 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2514 ms
+2025-06-12 22:32:29.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 6.7976ms
+2025-06-12 22:32:33.280 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:33.285 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3750 ms
+2025-06-12 22:32:33.287 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 6.5543ms
+2025-06-12 22:32:37.292 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:37.295 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2747 ms
+2025-06-12 22:32:37.298 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 5.9899ms
+2025-06-12 22:32:41.314 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:41.317 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2878 ms
+2025-06-12 22:32:41.318 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 4.7161ms
+2025-06-12 22:32:45.335 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:45.337 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3752 ms
+2025-06-12 22:32:45.339 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 4.5866ms
+2025-06-12 22:32:49.344 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:49.347 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2381 ms
+2025-06-12 22:32:49.348 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 4.0444ms
+2025-06-12 22:32:53.371 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:53.375 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2340 ms
+2025-06-12 22:32:53.377 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 5.6512ms
+2025-06-12 22:32:57.391 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:32:57.399 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2981 ms
+2025-06-12 22:32:57.401 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 10.2239ms
+2025-06-12 22:33:01.413 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:33:01.417 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3663 ms
+2025-06-12 22:33:01.418 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 4.9822ms
+2025-06-12 22:33:06.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:33:06.264 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3572 ms
+2025-06-12 22:33:06.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 8.8438ms
+2025-06-12 22:33:11.254 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:33:11.257 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2512 ms
+2025-06-12 22:33:11.259 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 4.5428ms
+2025-06-12 22:33:16.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:33:16.262 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2921 ms
+2025-06-12 22:33:16.265 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 5.7756ms
+2025-06-12 22:33:21.260 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:33:21.264 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3075 ms
+2025-06-12 22:33:21.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 6.5009ms
+2025-06-12 22:33:26.252 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:33:26.256 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2539 ms
+2025-06-12 22:33:26.257 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 2 null 5.8274ms
+2025-06-12 22:33:30.667 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v2/Categories - application/json 57
+2025-06-12 22:33:30.672 +01:00 [INF] Executing endpoint 'ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice)'
+2025-06-12 22:33:30.677 +01:00 [INF] Route matched with {action = "Create", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ProjectMicroservice.Models.Category] Create(ProjectMicroservice.Models.Category) on controller ProjectMicroservice.Controllers.CategoriesController (ProjectMicroservice).
+2025-06-12 22:33:30.703 +01:00 [INF] Executing action method ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice) - Validation state: "Valid"
+2025-06-12 22:33:30.708 +01:00 [INF] CategoriesController | Create request received {"CategoryId":0,"CategoryName":"deneme","Description":"test","Picture":null,"Products":[],"$type":"Category"}
+2025-06-12 22:33:30.805 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 15), @p1='?' (Size = 4000), @p2='?' (Size = 8000) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([CategoryName], [Description], [Picture])
+OUTPUT INSERTED.[CategoryID]
+VALUES (@p0, @p1, @p2);
+2025-06-12 22:33:30.829 +01:00 [INF] CategoriesController | Category created successfully with Id: 26
+2025-06-12 22:33:30.832 +01:00 [INF] Executed action method ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 126.0063ms.
+2025-06-12 22:33:30.834 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjectMicroservice.Models.Category'.
+2025-06-12 22:33:30.856 +01:00 [INF] Executed action ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice) in 178.3413ms
+2025-06-12 22:33:30.858 +01:00 [INF] Executed endpoint 'ProjectMicroservice.Controllers.CategoriesController.Create (ProjectMicroservice)'
+2025-06-12 22:33:30.860 +01:00 [INF] HTTP POST /api/v2/Categories responded 201 in 189.1665 ms
+2025-06-12 22:33:30.862 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v2/Categories - 201 null application/json; charset=utf-8 194.7877ms
+2025-06-12 22:33:31.252 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - application/json null
+2025-06-12 22:33:31.257 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.6303 ms
+2025-06-12 22:33:31.259 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=c3604106-4934-4b98-b60a-067f5e5bc533 - 200 202 null 6.783ms
+2025-06-12 22:33:35.269 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:33:35.272 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2320 ms
+2025-06-12 22:33:35.274 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 4.5484ms
+2025-06-12 22:33:36.511 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results?id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - null null
+2025-06-12 22:33:36.519 +01:00 [INF] HTTP GET /profiler/results responded 200 in 0.4793 ms
+2025-06-12 22:33:36.522 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results?id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 null text/html; charset=utf-8 10.4146ms
+2025-06-12 22:33:36.542 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:33:36.542 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:33:36.547 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 4.7165ms
+2025-06-12 22:33:36.559 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.0616ms
+2025-06-12 22:33:40.250 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:33:40.254 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3563 ms
+2025-06-12 22:33:40.256 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 6.3903ms
+2025-06-12 22:33:45.252 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:33:45.256 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2867 ms
+2025-06-12 22:33:45.258 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 6.2347ms
+2025-06-12 22:33:50.265 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:33:50.269 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2984 ms
+2025-06-12 22:33:50.271 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 6.3259ms
+2025-06-12 22:33:55.249 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:33:55.251 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2670 ms
+2025-06-12 22:33:55.253 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 3.8758ms
+2025-06-12 22:34:00.257 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:00.259 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2508 ms
+2025-06-12 22:34:00.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 4.493ms
+2025-06-12 22:34:05.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:05.264 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3984 ms
+2025-06-12 22:34:05.266 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 5.5286ms
+2025-06-12 22:34:10.257 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:10.260 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3252 ms
+2025-06-12 22:34:10.263 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 5.5787ms
+2025-06-12 22:34:15.255 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:15.258 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3415 ms
+2025-06-12 22:34:15.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 5.5492ms
+2025-06-12 22:34:20.254 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:20.257 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.4259 ms
+2025-06-12 22:34:20.259 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 5.048ms
+2025-06-12 22:34:25.267 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:25.271 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3425 ms
+2025-06-12 22:34:25.273 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 5.9318ms
+2025-06-12 22:34:30.260 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:30.265 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.2551 ms
+2025-06-12 22:34:30.266 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 6.8825ms
+2025-06-12 22:34:32.097 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/includes.js - null null
+2025-06-12 22:34:32.100 +01:00 [INF] HTTP GET /profiler/includes.js responded 404 in 0.2886 ms
+2025-06-12 22:34:32.103 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/includes.js - 404 23 text/plain 6.4081ms
+2025-06-12 22:34:35.257 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:35.259 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3567 ms
+2025-06-12 22:34:35.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 4.4302ms
+2025-06-12 22:34:39.340 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler - null null
+2025-06-12 22:34:39.344 +01:00 [INF] HTTP GET /profiler responded 404 in 0.1477 ms
+2025-06-12 22:34:39.348 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler - 404 11 text/plain 8.6499ms
+2025-06-12 22:34:40.253 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:40.255 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.3160 ms
+2025-06-12 22:34:40.257 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 4.4229ms
+2025-06-12 22:34:44.680 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results - null null
+2025-06-12 22:34:44.686 +01:00 [INF] HTTP GET /profiler/results responded 200 in 1.4656 ms
+2025-06-12 22:34:44.689 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results - 200 null text/html; charset=utf-8 10.3463ms
+2025-06-12 22:34:44.721 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-12 22:34:44.722 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-12 22:34:44.733 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.6258ms
+2025-06-12 22:34:44.750 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.5672ms
+2025-06-12 22:34:45.263 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:45.267 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.4209 ms
+2025-06-12 22:34:45.269 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 6.6139ms
+2025-06-12 22:34:50.262 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - application/json null
+2025-06-12 22:34:50.267 +01:00 [INF] HTTP GET /profiler/results-list responded 200 in 0.4859 ms
+2025-06-12 22:34:50.270 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/profiler/results-list?last-id=5150f3f7-60af-4398-9ce9-15c03aa5dfa9 - 200 2 null 8.3703ms
+2025-06-13 16:56:26.127 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 16:56:26.431 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-13 16:56:26.433 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-13 16:56:26.592 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 16:56:26.596 +01:00 [INF] Hosting environment: Development
+2025-06-13 16:56:26.600 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\ProjectMicroservice\ProjectMicroservice
+2025-06-13 16:56:27.649 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-13 16:56:28.084 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 249.8559 ms
+2025-06-13 16:56:28.098 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 517.4843ms
+2025-06-13 16:56:28.145 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 16:56:28.145 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-13 16:56:28.161 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.9012ms
+2025-06-13 16:56:28.273 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.1817ms
+2025-06-13 16:56:28.411 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-13 16:56:28.481 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 48.8660 ms
+2025-06-13 16:56:28.486 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.7133ms
+2025-06-16 10:57:42.461 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 10:57:42.715 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-16 10:57:42.717 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-16 10:57:42.880 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 10:57:42.882 +01:00 [INF] Hosting environment: Development
+2025-06-16 10:57:42.883 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\ProjectMicroservice\ProjectMicroservice
+2025-06-16 10:57:43.614 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 10:57:43.941 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 219.6977 ms
+2025-06-16 10:57:44.021 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 10:57:44.083 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 10:57:44.170 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 574.8879ms
+2025-06-16 10:57:44.180 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 159.6374ms
+2025-06-16 10:57:44.288 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 205.5502ms
+2025-06-16 10:57:44.374 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 10:57:44.419 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 27.6969 ms
+2025-06-16 10:57:44.424 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.5895ms
+2025-06-16 11:10:25.673 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 11:10:25.719 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 7.1472 ms
+2025-06-16 11:10:25.775 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 102.3164ms
+2025-06-16 11:10:25.793 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 11:10:25.794 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 11:10:25.854 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 60.2063ms
+2025-06-16 11:10:25.880 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.4462ms
+2025-06-16 11:10:26.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 11:10:26.209 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 35.5902 ms
+2025-06-16 11:10:26.221 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.2042ms
+2025-06-16 11:10:28.139 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 11:10:28.148 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 2.1962 ms
+2025-06-16 11:10:28.153 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 13.7299ms
+2025-06-16 11:10:28.186 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 11:10:28.186 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 11:10:28.196 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.9717ms
+2025-06-16 11:10:28.218 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.8426ms
+2025-06-16 11:10:28.254 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 11:10:28.270 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10.9381 ms
+2025-06-16 11:10:28.274 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.8978ms
+2025-06-16 13:48:53.116 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 13:48:53.610 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-16 13:48:53.614 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-16 13:48:53.770 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 13:48:53.776 +01:00 [INF] Hosting environment: Development
+2025-06-16 13:48:53.799 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\ProjectMicroservice\ProjectMicroservice
+2025-06-16 13:48:55.576 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 13:48:56.371 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 345.0198 ms
+2025-06-16 13:48:56.392 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 966.4898ms
+2025-06-16 13:48:56.443 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 13:48:56.447 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 13:48:56.496 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 53.4621ms
+2025-06-16 13:48:56.739 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 296.751ms
+2025-06-16 13:48:56.858 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 13:48:56.946 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 77.6006 ms
+2025-06-16 13:48:56.959 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.2437ms
+2025-06-16 13:52:23.420 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 13:52:23.924 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-16 13:52:23.926 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-16 13:52:24.084 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 13:52:24.087 +01:00 [INF] Hosting environment: Development
+2025-06-16 13:52:24.089 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\ProjectMicroservice\ProjectMicroservice
+2025-06-16 13:52:24.844 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 13:52:25.145 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 200.4514 ms
+2025-06-16 13:52:25.160 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 354.2396ms
+2025-06-16 13:52:25.171 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 13:52:25.171 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 13:52:25.200 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 29.6411ms
+2025-06-16 13:52:25.248 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.9912ms
+2025-06-16 13:52:25.298 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 13:52:25.350 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 47.9614 ms
+2025-06-16 13:52:25.354 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.4519ms
+2025-06-16 14:14:57.632 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 14:14:57.996 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-16 14:14:57.998 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-16 14:14:58.127 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 14:14:58.129 +01:00 [INF] Hosting environment: Development
+2025-06-16 14:14:58.130 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\ProjectMicroservice\ProjectMicroservice
+2025-06-16 14:14:58.596 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 14:14:58.961 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 234.1391 ms
+2025-06-16 14:14:58.971 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 412.6889ms
+2025-06-16 14:14:58.982 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:14:58.995 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.8044ms
+2025-06-16 14:14:59.015 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 14:14:59.107 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.8723ms
+2025-06-16 14:14:59.173 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 14:14:59.222 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 44.2152 ms
+2025-06-16 14:14:59.227 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.5204ms
+2025-06-16 14:15:54.647 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/ - null null
+2025-06-16 14:15:54.746 +01:00 [INF] HTTP GET / responded 404 in 71.1525 ms
+2025-06-16 14:15:54.752 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/ - 404 0 null 108.2803ms
+2025-06-16 14:15:54.777 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/, Response status code: 404
+2025-06-16 14:15:58.565 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 14:15:58.572 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 2.5791 ms
+2025-06-16 14:15:58.577 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 12.0627ms
+2025-06-16 14:15:58.615 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:15:58.625 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 11.0372ms
+2025-06-16 14:15:58.628 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 14:15:58.658 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.5977ms
+2025-06-16 14:15:58.722 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 14:15:58.742 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 16.4053 ms
+2025-06-16 14:15:58.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.1268ms
+2025-06-16 14:16:15.449 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/index.html - null null
+2025-06-16 14:16:15.477 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 22.0593 ms
+2025-06-16 14:16:15.486 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/index.html - 200 null text/html;charset=utf-8 36.7475ms
+2025-06-16 14:16:15.549 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:16:15.560 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/_vs/browserLink - null null
+2025-06-16 14:16:15.566 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 17.3619ms
+2025-06-16 14:16:15.574 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.2809ms
+2025-06-16 14:16:15.795 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - null null
+2025-06-16 14:16:15.811 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10.9889 ms
+2025-06-16 14:16:15.814 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5194/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.3201ms
+2025-06-16 14:28:29.737 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 14:28:30.003 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-16 14:28:30.005 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-16 14:28:30.168 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 14:28:30.170 +01:00 [INF] Hosting environment: Development
+2025-06-16 14:28:30.172 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\ProjectMicroservice\ProjectMicroservice
+2025-06-16 14:28:30.403 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 14:28:30.621 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 146.1645 ms
+2025-06-16 14:28:30.631 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 243.3573ms
+2025-06-16 14:28:30.651 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:28:30.652 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 14:28:30.673 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 21.5638ms
+2025-06-16 14:28:30.705 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.9725ms
+2025-06-16 14:28:30.740 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 14:28:30.769 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 25.8473 ms
+2025-06-16 14:28:30.772 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.8925ms
+2025-06-16 14:43:34.480 +01:00 [INF] User profile is available. Using 'C:\Users\Buket\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 14:43:34.732 +01:00 [INF] Now listening on: https://localhost:7219
+2025-06-16 14:43:34.733 +01:00 [INF] Now listening on: http://localhost:5194
+2025-06-16 14:43:34.829 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 14:43:34.830 +01:00 [INF] Hosting environment: Development
+2025-06-16 14:43:34.831 +01:00 [INF] Content root path: C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\ProjectMicroservice\ProjectMicroservice
+2025-06-16 14:43:35.105 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-06-16 14:43:35.327 +01:00 [INF] HTTP GET /swagger/index.html responded 200 in 130.3228 ms
+2025-06-16 14:43:35.338 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 261.3997ms
+2025-06-16 14:43:35.343 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:43:35.354 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-06-16 14:43:35.361 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 19.6559ms
+2025-06-16 14:43:35.439 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.196ms
+2025-06-16 14:43:35.492 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-06-16 14:43:35.556 +01:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 31.3032 ms
+2025-06-16 14:43:35.563 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.6905ms

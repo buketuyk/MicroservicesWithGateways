@@ -1,0 +1,16 @@
+services:  
+  project01:
+    image: projectmicroserviceimage:v1
+    build:
+      context: .
+      dockerfile: ProjectMicroservice/ProjectMicroservice/Dockerfile
+  project02:
+    image: project2image:v1
+    build:
+      context: .
+      dockerfile: CodeFirstApi/CodeFirstApi/Dockerfile
+  apigateway:
+    image: apigatewayimg:v1
+    build:
+      context: .
+      dockerfile: APIGateway/APIGateway/Dockerfile

@@ -1,0 +1,33 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/WeatherForecast/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "project2image:v1",
+                "Port": 9696
+              }
+            ],
+            "UpstreamPathTemplate": "/api/one/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+            "UpstreamScheme": "http"
+        },
+        {
+            "DownstreamPathTemplate": "/api/v2/Categories/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "projectmicroserviceimage:v1",
+                "Port": 9595
+              }
+            ],
+            "UpstreamPathTemplate": "/api/v2/iki/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+            "UpstreamScheme": "http"
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:9090"
+    }
+}

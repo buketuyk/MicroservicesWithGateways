@@ -1,0 +1,19 @@
+services:
+  project01:
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_HTTP_PORTS=9595
+    ports:
+    - "7575:9595"
+  project02:
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_HTTP_PORTS=9696
+    ports:
+    - "7676:9696"
+  apigateway:
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_HTTP_PORTS=9090
+    ports:
+    - "7070:9090"
