@@ -1,28 +1,41 @@
 {
     "Routes": [
-        {
-            "DownstreamPathTemplate": "/api/WeatherForecast/{everything}",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-              {
-                "Host": "project2image:v1",
-                "Port": 9696
-              }
-            ],
-            "UpstreamPathTemplate": "/api/one/{everything}",
-            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamScheme": "http"
-        },
-        {
+      {
             "DownstreamPathTemplate": "/api/v2/Categories/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
               {
-                "Host": "projectmicroserviceimage:v1",
+                "Host": "project01",
                 "Port": 9595
               }
             ],
             "UpstreamPathTemplate": "/api/v2/iki/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+            "UpstreamScheme": "http"
+        },
+        {
+            "DownstreamPathTemplate": "/WeatherForecast",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "project02",
+                "Port": 9696
+              }
+            ],
+            "UpstreamPathTemplate": "/one",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+            "UpstreamScheme": "http"
+        },        
+        {
+            "DownstreamPathTemplate": "/api/Values/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "project03",
+                "Port": 9797
+              }
+            ],
+            "UpstreamPathTemplate": "/api/three/{everything}",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
             "UpstreamScheme": "http"
         }
