@@ -27,7 +27,7 @@
             "UpstreamScheme": "http"
         },        
         {
-            "DownstreamPathTemplate": "/api/Values/{everything}",
+            "DownstreamPathTemplate": "/api/TaskStatuses",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
               {
@@ -35,7 +35,7 @@
                 "Port": 9797
               }
             ],
-            "UpstreamPathTemplate": "/api/three/{everything}",
+            "UpstreamPathTemplate": "/api/three",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
             "UpstreamScheme": "http"
         }

@@ -10,12 +10,12 @@ services:
       context: .
       dockerfile: CodeFirstApi/CodeFirstApi/Dockerfile
   project03:
-    image: project3image:v1
+    image: project3image:v3
     build:
       context: .
       dockerfile: CodeFirstMicroservice/CodeFirstMicroservice/Dockerfile
   apigateway:
-    image: apigatewayimg:v2
+    image: apigatewayimg:v3
     build:
       context: .
       dockerfile: APIGateway/APIGateway/Dockerfile

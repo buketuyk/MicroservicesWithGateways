@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CBG7tn71ItZ9naEyxBKfXa7XFPjnNb22OfIrEcpfTyc=",
+  "Source": "CodeFirstMicroservice",
+  "BasePath": "_content/CodeFirstMicroservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
