@@ -33,6 +33,8 @@ namespace CodeFirstMicroservice.Controllers
 
         // GET all
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<StatusDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<StatusDto>>> GetAllAsync()
         {
             var statuses = await _context.Statuses.ToListAsync();
