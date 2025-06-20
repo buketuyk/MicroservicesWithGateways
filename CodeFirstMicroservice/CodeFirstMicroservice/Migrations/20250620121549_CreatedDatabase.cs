@@ -27,7 +27,7 @@ namespace CodeFirstMicroservice.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TaskStatuses",
+                name: "Statuses",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -36,7 +36,7 @@ namespace CodeFirstMicroservice.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TaskStatuses", x => x.Id);
+                    table.PrimaryKey("PK_Statuses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -78,9 +78,9 @@ namespace CodeFirstMicroservice.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TaskItems_TaskStatuses_StatusId",
+                        name: "FK_TaskItems_Statuses_StatusId",
                         column: x => x.StatusId,
-                        principalTable: "TaskStatuses",
+                        principalTable: "Statuses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -109,7 +109,7 @@ namespace CodeFirstMicroservice.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "TaskStatuses",
+                table: "Statuses",
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
@@ -146,7 +146,7 @@ namespace CodeFirstMicroservice.Migrations
                 name: "Categories");
 
             migrationBuilder.DropTable(
-                name: "TaskStatuses");
+                name: "Statuses");
 
             migrationBuilder.DropTable(
                 name: "Users");

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodeFirstMicroservice.Migrations
 {
     [DbContext(typeof(TaskManagementContext))]
-    [Migration("20250619135557_UpdatedDefaultValueInTaskStatus")]
-    partial class UpdatedDefaultValueInTaskStatus
+    [Migration("20250620121549_CreatedDatabase")]
+    partial class CreatedDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -94,6 +94,50 @@ namespace CodeFirstMicroservice.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CodeFirstMicroservice.Models.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Statuses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Backlog"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Todo"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "In Progress"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Test"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Done"
+                        });
+                });
+
             modelBuilder.Entity("CodeFirstMicroservice.Models.TaskItem", b =>
                 {
                     b.Property<int>("Id")
@@ -139,50 +183,6 @@ namespace CodeFirstMicroservice.Migrations
                     b.ToTable("TaskItems");
                 });
 
-            modelBuilder.Entity("CodeFirstMicroservice.Models.TaskStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TaskStatuses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Backlog"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Todo"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "In Progress"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Test"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Done"
-                        });
-                });
-
             modelBuilder.Entity("CodeFirstMicroservice.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -218,7 +218,7 @@ namespace CodeFirstMicroservice.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CodeFirstMicroservice.Models.TaskStatus", "Status")
+                    b.HasOne("CodeFirstMicroservice.Models.Status", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -11,18 +11,18 @@ namespace CodeFirstMicroservice.Models
         public DbSet<TaskItem> TaskItems { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<TaskStatus> TaskStatuses { get; set; }
+        public DbSet<Status> Statuses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<TaskStatus>().HasData(
-                new TaskStatus { Id = 1, Name = "Backlog" },
-                new TaskStatus { Id = 2, Name = "Todo" },
-                new TaskStatus { Id = 3, Name = "In Progress" },
-                new TaskStatus { Id = 4, Name = "Test" },
-                new TaskStatus { Id = 5, Name = "Done" }
+            modelBuilder.Entity<Status>().HasData(
+                new Status { Id = 1, Name = "Backlog" },
+                new Status { Id = 2, Name = "Todo" },
+                new Status { Id = 3, Name = "In Progress" },
+                new Status { Id = 4, Name = "Test" },
+                new Status { Id = 5, Name = "Done" }
             );
 
             modelBuilder.Entity<Category>().HasData(

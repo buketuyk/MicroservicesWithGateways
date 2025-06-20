@@ -10,7 +10,7 @@
         public DateTime? CompletedAt { get; set; }
         public int AssignedUserId { get; set; }
         public User? AssignedUser { get; set; }
-        public TaskStatus Status { get; set; } = new TaskStatus { Id = 1, Name = "Backlog" };
+        public Status Status { get; set; } = new Status { Id = 1, Name = "Backlog" };
         public int CategoryId { get; set; }
         public Category Category { get; set; } = null!;
     }
