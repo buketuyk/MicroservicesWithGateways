@@ -148,3 +148,5 @@ C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroserv
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\obj\Debug\net8.0\ref\CodeFirstMicroservice.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

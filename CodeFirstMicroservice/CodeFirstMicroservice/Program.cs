@@ -1,4 +1,5 @@
-﻿using CodeFirstMicroservice.Models;
+﻿using CodeFirstMicroservice.Mappings;
+using CodeFirstMicroservice.Models;
 using CodeFirstMicroservice.Validations;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
@@ -24,14 +25,14 @@ builder.Services.AddSwaggerGen(options =>
             Url = new Uri("https://your-portfolio.com")
         }
     });
-
-    // options.EnableAnnotations(); // Swagger açıklamaları için opsiyonel
 });
 
 builder.Services.AddDbContext<TaskManagementContext>( options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddAutoMapper(typeof(StatusProfile));
 
 builder.Services.AddValidatorsFromAssemblyContaining<TaskValidator>();
 
