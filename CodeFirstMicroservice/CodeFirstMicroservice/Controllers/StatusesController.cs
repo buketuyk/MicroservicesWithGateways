@@ -105,11 +105,11 @@ namespace CodeFirstMicroservice.Controllers
         }
 
         // PUT
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:int}")]   // noteb: id from url - /api/statuses/5 
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> UpdateAsync(int id, [FromBody] StatusDto dto)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] StatusDto dto)   // noteb: id'yi url'den aldim, StatusDto dto is body. Ayni id mi kiyasliyoruz
         {
             if (!ModelState.IsValid)
             {
