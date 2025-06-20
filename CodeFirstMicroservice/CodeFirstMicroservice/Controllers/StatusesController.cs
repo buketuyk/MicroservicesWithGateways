@@ -1,4 +1,5 @@
 ﻿using CodeFirstMicroservice.Models;
+using CodeFirstMicroservice.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,9 +18,22 @@ namespace CodeFirstMicroservice.Controllers
             _logger = logger;
         }
 
-        // GET: api/Statuses
+        // Manual Mapping (DTO <-> Entity)
+        private static StatusDto ToDto(Status status) => new()
+        {
+            Id = status.Id,
+            Name = status.Name
+        };
+
+        private static Status ToEntity(StatusDto dto) => new()
+        {
+            Id = dto.Id,
+            Name = dto.Name
+        };
+
+        // GET all
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Status>>> GetAllAsync()
+        public async Task<ActionResult<IEnumerable<StatusDto>>> GetAllAsync()
         {
             var statuses = await _context.Statuses.ToListAsync();
 
@@ -29,12 +43,12 @@ namespace CodeFirstMicroservice.Controllers
                 return NotFound("No statuses found.");
             }
 
-            return Ok(statuses);
+            return Ok(statuses.Select(ToDto));
         }
 
-        // GET: api/Statuses/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Status>> GetByIdAsync(int id)
+        // GET by ID
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<StatusDto>> GetByIdAsync(int id)
         {
             var status = await _context.Statuses.FindAsync(id);
 
@@ -44,41 +58,37 @@ namespace CodeFirstMicroservice.Controllers
                 return NotFound(new { message = $"Status with ID {id} not found." });
             }
 
-            return Ok(status);
+            return Ok(ToDto(status));
         }
 
-        // POST: api/Statuses
+        // POST
         [HttpPost]
-        public async Task<ActionResult<Status>> Post([FromBody] Status status)
+        public async Task<ActionResult<StatusDto>> PostAsync([FromBody] StatusDto dto)
         {
-            if (status == null || string.IsNullOrWhiteSpace(status.Name))
+            if (dto == null || string.IsNullOrWhiteSpace(dto.Name))
             {
                 return BadRequest("Invalid status data.");
             }
 
-            await _context.Statuses.AddAsync(status);
+            var entity = ToEntity(dto);
+            await _context.Statuses.AddAsync(entity);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetByIdAsync), new { id = status.Id }, status);
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = entity.Id }, ToDto(entity));
         }
 
-        // PUT: api/Statuses/5
+        // PUT
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateAsync(int id, [FromBody] Status status)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] StatusDto dto)
         {
-            if (id != status.Id)
-            {
+            if (id != dto.Id)
                 return BadRequest(new { message = "Route ID does not match Status ID." });
-            }
 
-            var existing = await _context.Statuses.FindAsync(id);
-            if (existing == null)
-            {
+            var entity = await _context.Statuses.FindAsync(id);
+            if (entity == null)
                 return NotFound(new { message = $"Status with ID {id} does not exist." });
-            }
 
-            existing.Name = status.Name;
-            _context.Entry(existing).State = EntityState.Modified;
+            entity.Name = dto.Name;
 
             try
             {
@@ -92,17 +102,15 @@ namespace CodeFirstMicroservice.Controllers
             }
         }
 
-        // DELETE: api/Statuses/5
+        // DELETE
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var status = await _context.Statuses.FindAsync(id);
-            if (status == null)
-            {
+            var entity = await _context.Statuses.FindAsync(id);
+            if (entity == null)
                 return NotFound(new { message = $"Status with ID {id} not found." });
-            }
 
-            _context.Statuses.Remove(status);
+            _context.Statuses.Remove(entity);
             await _context.SaveChangesAsync();
 
             return NoContent();
