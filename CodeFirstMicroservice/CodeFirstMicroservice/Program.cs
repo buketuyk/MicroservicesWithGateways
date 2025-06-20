@@ -3,6 +3,7 @@ using CodeFirstMicroservice.Middleware;
 using CodeFirstMicroservice.Models;
 using CodeFirstMicroservice.Validations;
 using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,7 +36,9 @@ builder.Services.AddDbContext<TaskManagementContext>( options =>
 
 builder.Services.AddAutoMapper(typeof(StatusProfile));
 
-builder.Services.AddValidatorsFromAssemblyContaining<TaskValidator>();
+builder.Services.AddFluentValidationAutoValidation()
+                .AddFluentValidationClientsideAdapters();
+builder.Services.AddValidatorsFromAssemblyContaining<StatusDtoValidator>();
 
 var app = builder.Build();
 

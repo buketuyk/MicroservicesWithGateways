@@ -55,7 +55,7 @@ namespace CodeFirstMicroservice.Controllers
         }
 
         // GET BY ID
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "GetByIdAsync")]
         [ProducesResponseType(typeof(StatusDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<StatusDto>> GetByIdAsync(int id)
@@ -81,10 +81,17 @@ namespace CodeFirstMicroservice.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<StatusDto>> PostAsync([FromBody] StatusDto dto) // noteb: dto alip dto donuyoruz, veritabi objesi donmuyoruz (Güvenlik, Ayrışma(decoupling), Geliştirilebilirlik, Versiyonlama kolaylığı)
         {
-            if (dto == null || string.IsNullOrWhiteSpace(dto.Name))
+            if (!ModelState.IsValid)
             {
                 _logger.LogWarning("POST /api/statuses - Attempted to create status with invalid data.");
-                return BadRequest("Invalid status data.");
+
+                var errors = ModelState
+                    .Where(x => x.Value?.Errors.Count > 0)
+                    .ToDictionary(
+                        kvp => kvp.Key,
+                        kvp => kvp.Value?.Errors.Select(e => e.ErrorMessage).ToList());
+                
+                return BadRequest( new { message = "Validation failed", errors = errors } );
             }
 
             var entity = _mapper.Map<Status>(dto);
@@ -94,7 +101,7 @@ namespace CodeFirstMicroservice.Controllers
             var resultDto = _mapper.Map<StatusDto>(entity);
             _logger.LogInformation("POST /api/statuses - Status with ID {Id} created successfully.", entity.Id);
 
-            return CreatedAtAction(nameof(GetByIdAsync), new { id = entity.Id }, resultDto);
+            return CreatedAtRoute(nameof(GetByIdAsync), new { id = entity.Id }, resultDto);
         }
 
         // PUT

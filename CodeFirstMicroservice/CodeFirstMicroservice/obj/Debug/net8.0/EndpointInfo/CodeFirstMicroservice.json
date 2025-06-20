@@ -140,6 +140,7 @@
         "tags": [
           "Statuses"
         ],
+        "operationId": "GetByIdAsync",
         "parameters": [
           {
             "name": "id",

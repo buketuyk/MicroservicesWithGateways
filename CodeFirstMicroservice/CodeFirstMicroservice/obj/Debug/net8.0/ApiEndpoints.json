@@ -96,7 +96,8 @@
         ],
         "StatusCode": 404
       }
-    ]
+    ],
+    "EndpointName": "GetByIdAsync"
   },
   {
     "ContainingType": "CodeFirstMicroservice.Controllers.StatusesController",
