@@ -1,4 +1,5 @@
 ﻿using CodeFirstMicroservice.Mappings;
+using CodeFirstMicroservice.Middleware;
 using CodeFirstMicroservice.Models;
 using CodeFirstMicroservice.Validations;
 using FluentValidation;
@@ -47,6 +48,8 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Task Management API v1");
     });
 }
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 

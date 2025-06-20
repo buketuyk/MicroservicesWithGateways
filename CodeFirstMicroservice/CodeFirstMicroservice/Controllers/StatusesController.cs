@@ -3,7 +3,6 @@ using CodeFirstMicroservice.Models;
 using CodeFirstMicroservice.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace CodeFirstMicroservice.Controllers
 {
@@ -48,11 +47,11 @@ namespace CodeFirstMicroservice.Controllers
                 _logger.LogInformation("GET /api/statuses - No statuses found.");
                 return NotFound("No statuses found.");
             }
-            
+
             _logger.LogInformation("GET /api/statuses - {Count} statuses retrieved", statuses.Count);
 
             var dtoList = _mapper.Map<IEnumerable<StatusDto>>(statuses);
-            return Ok(dtoList); // dto olarak donuyoruz objeleri, veritabani objelerini donmuyoruz
+            return Ok(dtoList); // noteb: dto olarak donuyoruz objeleri, veritabani objelerini donmuyoruz
         }
 
         // GET BY ID
@@ -80,7 +79,7 @@ namespace CodeFirstMicroservice.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(StatusDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<StatusDto>> PostAsync([FromBody] StatusDto dto) //dto alip dto donuyoruz, veritabi objesi donmuyoruz (Güvenlik, Ayrışma(decoupling), Geliştirilebilirlik, Versiyonlama kolaylığı)
+        public async Task<ActionResult<StatusDto>> PostAsync([FromBody] StatusDto dto) // noteb: dto alip dto donuyoruz, veritabi objesi donmuyoruz (Güvenlik, Ayrışma(decoupling), Geliştirilebilirlik, Versiyonlama kolaylığı)
         {
             if (dto == null || string.IsNullOrWhiteSpace(dto.Name))
             {
@@ -103,7 +102,6 @@ namespace CodeFirstMicroservice.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateAsync(int id, [FromBody] StatusDto dto)
         {
             if (id != dto.Id)
@@ -118,26 +116,18 @@ namespace CodeFirstMicroservice.Controllers
                 _logger.LogWarning("PUT /api/statuses/{Id} - Status not found.", id);
                 return NotFound(new { message = $"Status with ID {id} does not exist." });
             }
-            entity.Name = dto.Name;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-                _logger.LogInformation("PUT /api/statuses/{Id} - Status updated successfully.", id);
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "PUT /api/statuses/{Id} - Unexpected error occurred.", id);
-                return StatusCode(500, new { message = "An error occurred while updating the status." });
-            }
+            entity.Name = dto.Name;
+            
+            await _context.SaveChangesAsync();
+            _logger.LogInformation("PUT /api/statuses/{Id} - Status updated successfully.", id);
+            return NoContent();
         }
 
         // DELETE
         [HttpDelete("{id:int}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]  // noteb: servisteki donus tiplerini yazmak; api doc'a bakip entegrasyon yapan icin kodunu ona gore donus tipi ayarlamasi yapmasi bakimindan iyi
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)] // noteb: servisteki donus tiplerini yazmak; api doc'a bakip entegrasyon yapan icin kodunu ona gore donus tipi ayarlamasi yapmasi bakimindan iyi
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var entity = await _context.Statuses.FindAsync(id);
@@ -148,17 +138,10 @@ namespace CodeFirstMicroservice.Controllers
             }
 
             _context.Statuses.Remove(entity);
-            try
-            {
-                await _context.SaveChangesAsync();
-                _logger.LogInformation("DELETE /api/statuses/{Id} - Status deleted successfully.", id);
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "DELETE /api/statuses/{Id} - Error deleting status.", id);
-                return StatusCode(500, new { message = "An error occurred while deleting the status." });
-            }
+            await _context.SaveChangesAsync();
+            
+            _logger.LogInformation("DELETE /api/statuses/{Id} - Status deleted successfully.", id);
+            return NoContent();
         }
     }
 }
