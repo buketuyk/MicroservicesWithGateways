@@ -111,6 +111,19 @@ namespace CodeFirstMicroservice.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> UpdateAsync(int id, [FromBody] StatusDto dto)
         {
+            if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("PUT api/status/{Id} - Attempted to update with invalid data.", id);
+
+                var errors = ModelState
+                    .Where(x => x.Value?.Errors.Count > 0)
+                    .ToDictionary(
+                        kvp => kvp.Key,
+                        kvp => kvp.Value?.Errors.Select(e => e.ErrorMessage).ToList());
+
+                return BadRequest(new { message = "Validation failed", errors = errors });
+            }
+
             if (id != dto.Id)
             {
                 _logger.LogWarning("PUT /api/statuses/{Id} - Route ID does not match Status ID.", id);
