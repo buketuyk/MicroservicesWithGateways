@@ -108,13 +108,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "CodeFirstMicroservice.Models.Dtos.StatusDto",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "id",
-        "Type": "",
+        "Name": "dto",
+        "Type": "CodeFirstMicroservice.Models.Dtos.StatusDto",
         "IsRequired": true
       }
     ],

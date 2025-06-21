@@ -1,8 +1,7 @@
-﻿using AutoMapper;
+﻿using CodeFirstMicroservice.Interfaces;
 using CodeFirstMicroservice.Models;
 using CodeFirstMicroservice.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirstMicroservice.Controllers
 {
@@ -10,29 +9,14 @@ namespace CodeFirstMicroservice.Controllers
     [ApiController]
     public class StatusesController : ControllerBase
     {
-        private readonly TaskManagementContext _context;
+        private readonly IStatusService _statusService;
         private readonly ILogger<StatusesController> _logger;
-        private readonly IMapper _mapper;
 
-        public StatusesController(TaskManagementContext context, ILogger<StatusesController> logger, IMapper mapper)
+        public StatusesController(ILogger<StatusesController> logger, IStatusService statusService)
         {
-            _context = context;
             _logger = logger;
-            _mapper = mapper;
+            _statusService = statusService;
         }
-
-        // noteb: Manual Mapping (DTO <-> Entity) AutoMapper kullanildiginda kaldirildi.
-        //private static StatusDto ToDto(Status status) => new()
-        //{
-        //    Id = status.Id,
-        //    Name = status.Name
-        //};
-
-        //private static Status ToEntity(StatusDto dto) => new()
-        //{
-        //    Id = dto.Id,
-        //    Name = dto.Name
-        //};
 
         // GET ALL
         [HttpGet]
@@ -40,18 +24,16 @@ namespace CodeFirstMicroservice.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<StatusDto>>> GetAllAsync()
         {
-            var statuses = await _context.Statuses.ToListAsync();
-
+            var statuses = await _statusService.GetAllAsync();
             if (!statuses.Any())
             {
                 _logger.LogInformation("GET /api/statuses - No statuses found.");
                 return NotFound("No statuses found.");
             }
 
-            _logger.LogInformation("GET /api/statuses - {Count} statuses retrieved", statuses.Count);
+            _logger.LogInformation("GET /api/statuses - {Count} statuses retrieved", statuses.Count());
 
-            var dtoList = _mapper.Map<IEnumerable<StatusDto>>(statuses);
-            return Ok(dtoList); // noteb: dto olarak donuyoruz objeleri, veritabani objelerini donmuyoruz
+            return Ok(statuses);
         }
 
         // GET BY ID
@@ -60,7 +42,7 @@ namespace CodeFirstMicroservice.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<StatusDto>> GetByIdAsync(int id)
         {
-            var status = await _context.Statuses.FindAsync(id);
+            var status = await _statusService.GetByIdAsync(id);
 
             if (status == null)
             {
@@ -70,9 +52,7 @@ namespace CodeFirstMicroservice.Controllers
 
             _logger.LogInformation("GET /api/statuses/{Id} - Status retrieved successfully.", id);
 
-            var statusDto = _mapper.Map<StatusDto>(status);
-
-            return Ok(statusDto);
+            return Ok(status);
         }
 
         // POST
@@ -83,25 +63,15 @@ namespace CodeFirstMicroservice.Controllers
         {
             if (!ModelState.IsValid)
             {
-                _logger.LogWarning("POST /api/statuses - Attempted to create status with invalid data.");
-
-                var errors = ModelState
-                    .Where(x => x.Value?.Errors.Count > 0)
-                    .ToDictionary(
-                        kvp => kvp.Key,
-                        kvp => kvp.Value?.Errors.Select(e => e.ErrorMessage).ToList());
-                
-                return BadRequest( new { message = "Validation failed", errors = errors } );
+                _logger.LogWarning("POST /api/statuses - Invalid model state.");
+                return BadRequest(ModelState);
             }
 
-            var entity = _mapper.Map<Status>(dto);
-            await _context.Statuses.AddAsync(entity);
-            await _context.SaveChangesAsync();
+            var createdStatus = await _statusService.PostAsync(dto);
+            
+            _logger.LogInformation("POST /api/statuses - Status created with ID {Id}.", createdStatus.Id);
 
-            var resultDto = _mapper.Map<StatusDto>(entity);
-            _logger.LogInformation("POST /api/statuses - Status with ID {Id} created successfully.", entity.Id);
-
-            return CreatedAtRoute(nameof(GetByIdAsync), new { id = entity.Id }, resultDto);
+            return CreatedAtRoute(nameof(GetByIdAsync), new { id = createdStatus.Id }, createdStatus);
         }
 
         // PUT
@@ -114,14 +84,7 @@ namespace CodeFirstMicroservice.Controllers
             if (!ModelState.IsValid)
             {
                 _logger.LogWarning("PUT api/status/{Id} - Attempted to update with invalid data.", id);
-
-                var errors = ModelState
-                    .Where(x => x.Value?.Errors.Count > 0)
-                    .ToDictionary(
-                        kvp => kvp.Key,
-                        kvp => kvp.Value?.Errors.Select(e => e.ErrorMessage).ToList());
-
-                return BadRequest(new { message = "Validation failed", errors = errors });
+                return BadRequest(ModelState);
             }
 
             if (id != dto.Id)
@@ -129,17 +92,15 @@ namespace CodeFirstMicroservice.Controllers
                 _logger.LogWarning("PUT /api/statuses/{Id} - Route ID does not match Status ID.", id);
                 return BadRequest(new { message = "Route ID does not match Status ID." });
             }
+            
+            var updatedStatus = await _statusService.UpdateAsync(id, dto);
 
-            var entity = await _context.Statuses.FindAsync(id);
-            if (entity == null)
+            if (!updatedStatus)
             {
                 _logger.LogWarning("PUT /api/statuses/{Id} - Status not found.", id);
                 return NotFound(new { message = $"Status with ID {id} does not exist." });
             }
-
-            entity.Name = dto.Name;
-            
-            await _context.SaveChangesAsync();
+             
             _logger.LogInformation("PUT /api/statuses/{Id} - Status updated successfully.", id);
             return NoContent();
         }
@@ -150,15 +111,13 @@ namespace CodeFirstMicroservice.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var entity = await _context.Statuses.FindAsync(id);
-            if (entity == null)
+            var deleted = await _statusService.DeleteAsync(id);
+            
+            if (!deleted)
             {
                 _logger.LogWarning("DELETE /api/statuses/{Id} - Status not found.", id);
                 return NotFound(new { message = $"Status with ID {id} not found." });
             }
-
-            _context.Statuses.Remove(entity);
-            await _context.SaveChangesAsync();
             
             _logger.LogInformation("DELETE /api/statuses/{Id} - Status deleted successfully.", id);
             return NoContent();

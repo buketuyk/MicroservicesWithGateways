@@ -1,6 +1,8 @@
-﻿using CodeFirstMicroservice.Mappings;
+﻿using CodeFirstMicroservice.Interfaces;
+using CodeFirstMicroservice.Mappings;
 using CodeFirstMicroservice.Middleware;
 using CodeFirstMicroservice.Models;
+using CodeFirstMicroservice.Services;
 using CodeFirstMicroservice.Validations;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -39,6 +41,8 @@ builder.Services.AddAutoMapper(typeof(StatusProfile));
 builder.Services.AddFluentValidationAutoValidation()
                 .AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblyContaining<StatusDtoValidator>();
+
+builder.Services.AddScoped<IStatusService, StatusService>();
 
 var app = builder.Build();
 
