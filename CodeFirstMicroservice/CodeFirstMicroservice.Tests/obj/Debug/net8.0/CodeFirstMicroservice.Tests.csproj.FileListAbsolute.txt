@@ -161,3 +161,6 @@ C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroserv
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice.Tests\obj\Debug\net8.0\CodeFirstMicroservice.Tests.pdb
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice.Tests\obj\Debug\net8.0\CodeFirstMicroservice.Tests.genruntimeconfig.cache
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice.Tests\obj\Debug\net8.0\ref\CodeFirstMicroservice.Tests.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice.Tests\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice.Tests\bin\Debug\net8.0\Moq.dll

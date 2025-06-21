@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodeFirstMicroservice.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f795a64cf0d352bba65e94bf769384e3a60cd56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+121fe143c565471061a7670b892803e1f425305e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeFirstMicroservice.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeFirstMicroservice.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
