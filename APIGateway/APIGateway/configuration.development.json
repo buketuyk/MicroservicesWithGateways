@@ -27,7 +27,7 @@
             "UpstreamScheme": "http"
         },        
         {
-            "DownstreamPathTemplate": "/api/TaskStatuses",
+            "DownstreamPathTemplate": "/api/Statuses",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
               {
