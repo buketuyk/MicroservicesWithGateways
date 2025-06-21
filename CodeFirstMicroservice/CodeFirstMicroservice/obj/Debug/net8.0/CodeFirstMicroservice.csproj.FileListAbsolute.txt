@@ -6,8 +6,13 @@ C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroserv
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\CodeFirstMicroservice.runtimeconfig.json
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\CodeFirstMicroservice.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\CodeFirstMicroservice.pdb
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\Humanizer.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -146,8 +151,3 @@ C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroserv
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\obj\Debug\net8.0\CodeFirstMicroservice.pdb
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\obj\Debug\net8.0\CodeFirstMicroservice.genruntimeconfig.cache
 C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\obj\Debug\net8.0\ref\CodeFirstMicroservice.dll
-C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.dll
-C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
-C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\Buket\Source\Projects\MicroserviceProjectWithGateway\CodeFirstMicroservice\CodeFirstMicroservice\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
